@@ -23,4 +23,4 @@ jobs:
         run: docker build -t soufianos/docker-react -f Dockerfile.dev .
 
       - name: Run Tests
-        run: docker run soufianos/docker-react npm run test -- --coverage
+        run: docker run -e CI=true soufianos/docker-react npm test -- --coverage
